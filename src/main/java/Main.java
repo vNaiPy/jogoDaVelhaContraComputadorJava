@@ -7,9 +7,6 @@ import JogoDaVelha.Tabuleiro;
 
 import java.util.Scanner;
 
-import static JogoDaVelha.Tabuleiro.imprimirTabuleiro;
-import static JogoDaVelha.Tabuleiro.verificaTabuleiro;
-
 public class Main {
 
     public static void main(String[] args) {
@@ -50,8 +47,8 @@ public class Main {
 
         //Inicio do jogo
         while(jogoEmAndamento){
-            imprimirTabuleiro(tabuleiroJogo);
-            ganhador = verificaTabuleiro(tabuleiroJogo, jogadorHumano, rodadaPartida);
+            Tabuleiro.imprimirTabuleiro(tabuleiroJogo);
+            ganhador = Tabuleiro.verificaTabuleiro(tabuleiroJogo, jogadorHumano, rodadaPartida);
 
             if(ganhador){//Imprimi o ganhador e finaliza o jogo.
                 break;
